@@ -24,11 +24,6 @@ for (let i = 0; i < newArr; i++) {
 let avg = total / newArr
 
 
-function getNum (min , max , avg) {
-  this.min = min
-  this.max = max
-  this.avg = avg
-}
 console.log("The minimum number is " + min);
 console.log("The maximum number is " + max);
 console.log("The average number is " + avg);
