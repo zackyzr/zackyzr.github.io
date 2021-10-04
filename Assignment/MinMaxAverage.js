@@ -23,6 +23,13 @@ for (let i = 0; i < newArr; i++) {
 }
 let avg = total / newArr
 
+function intmain()
+{
+	this.min = min
+	this.max = max
+	this.avg = avg
+}
+
 
 console.log("The minimum number is " + min);
 console.log("The maximum number is " + max);
