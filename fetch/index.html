@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fetch: Get Random User</title>
+	<style>
+		.gender
+		{
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+<body>
+	<h1>Get Random User</h1>
+	<button id="getRandomUser">Random User</button>
+	<div id="firstName">First name</div>
+	<div id="lastName">Last name</div>
+	<div id="phone">Phone Number</div>
+	<img id="userImg">
+	
+	<h2>Get multiple users</h2>
+
+	<button id="multiUser">Multiple User</button>
+	<input type="text" id="userCount" value ="10">
+	<div id="allUsers">List</div>
+
+	<h2>Get Female/Male Users</h2>
+
+	<button id="getGenderUser">Female/Male Multiple User</button>
+
+	<label for="gender" >Gender : </label>
+
+	<select id="userGender">
+		<option value="male">Male Only</option>
+		<option value="female">Female Only</option>
+	</select>
+
+	<input type="text" id="userGenderCount" value ="5">
+	<div id="allGenderUsers">List User</div>
+	
+	<script src="js/fetch.js"></script>
+</body>
+</html>

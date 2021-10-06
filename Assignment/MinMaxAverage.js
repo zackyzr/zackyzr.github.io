@@ -28,6 +28,7 @@ function intmain()
 	this.min = min
 	this.max = max
 	this.avg = avg
+
 }
 
 
