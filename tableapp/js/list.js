@@ -51,7 +51,7 @@ refreshNowBtn.addEventListener("click", function () {
 })
 
 function GetBooking() {
-    let url = 'https://api.sheety.co/d0ee26f24ec023cbb11299f34bf1c977/bookingApp/bookings';
+    let url = "https://api.sheety.co/d0ee26f24ec023cbb11299f34bf1c977/bookingApp/bookings" ;
     fetch(url)
         .then((response) => response.json())
         .then(json => {
@@ -80,7 +80,7 @@ function GetBooking() {
                 row.insertCell(1).innerHTML = gName
                 row.insertCell(2).innerHTML = gEmail
                 row.insertCell(3).innerHTML = gPax
-                row.insertCell(4).innerHTML = gRemarks
+                row.insertCell(4).innerHTML = gRemarks 
                 row.insertCell(5).innerHTML = "<button id='" + btnId + "' type='button' class='btn btn-danger'>Delete</button>"
 
                 bookingIds.push(btnId)
@@ -99,12 +99,12 @@ function GetBooking() {
 }
 
 function DeleteBooking(id) {
-	let url = 'https://api.sheety.co/d0ee26f24ec023cbb11299f34bf1c977/bookingApp/bookings/2';
-	fetch(url, {
-	  method: 'DELETE',
-	})
-	.then(() => {
-		alert("Record id " + id + " deleted!")
-		GetBooking()
-	});
+    let url = 'https://api.sheety.co/d0ee26f24ec023cbb11299f34bf1c977/bookingApp/bookings/' + id;
+    fetch(url, {
+        method: 'DELETE',
+    })
+        .then(() => {
+            alert("Record id " + id + " deleted!")
+            GetBooking()
+        });
 }
