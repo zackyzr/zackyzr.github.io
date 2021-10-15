@@ -41,18 +41,56 @@ let app4 = new Vue(
 		el: "#app4",
 		data: {
 			theList: [
-				{text: "Learn HTML"},
-				{text: "Learn CSS"},
-				{text: "Learn js"}
+				{ text: "Learn HTML" },
+				{ text: "Learn CSS" },
+				{ text: "Learn js" }
 			]
 		}
 
 	})
 
-	let app5 = new Vue(
+let app5 = new Vue(
+	{
+		el: "#app5",
+		data:
 		{
-			el: "#app5",
-			data: {
-			message: "Hello"
-			}
-		})
+			message: "Hello",
+			groceryList: [
+				{
+					id: 1,
+					desc: "Rocket Salad"
+				},
+				{
+					id: 2,
+					desc: "Cheese"
+				},
+				{
+					id: 3,
+					desc: "Ramen"
+				},
+				{
+					id: 4,
+					desc: "Ice lemon tea"
+				}
+			],
+			orderList: [
+				{
+					id: 1,
+					desc: "Nasi Lemak"
+				},
+				{
+					id: 2,
+					desc: "Nasi Kerabu"
+				},
+				{
+					id: 3,
+					desc: "Nasi Ayam"
+				},
+				{
+					id: 4,
+					desc: "Nasi Goreng"
+				}
+			]
+
+		}
+	})
