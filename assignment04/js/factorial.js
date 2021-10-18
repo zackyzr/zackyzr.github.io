@@ -6,6 +6,7 @@ let elres =document.getElementById("res")
 
 function factorial(n)
 {
+	let answer = 1;
 	if (isNaN(n))
 	{
 		let answer = " can't be found because it is not a number."
@@ -14,7 +15,6 @@ function factorial(n)
 	}
 	else if	 (n == 0 || n == 1)
 	{
-	  answer = 1;
 	  return answer;
 	}
 	else
@@ -27,6 +27,17 @@ function factorial(n)
 	}
 
 }
+function factorial(n){
+	let answer = 1;
+	if (n == 0 || n == 1){
+	  return answer;
+	}else{
+	  for(var i = n; i >= 1; i--){
+		answer = answer * i;
+	  }
+	  return answer;
+	}  
+  }
 
 elcal.addEventListener("click", function()
 {
