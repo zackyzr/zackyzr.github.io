@@ -41,6 +41,6 @@ function factorial(n){
 
 elcal.addEventListener("click", function()
 {
-	elres.innerHTML = "The factorial of " + num.value + " is" + factorial(num.value)
+	elres.innerHTML = "The factorial of " + num.value + " is " + factorial(num.value)
 
 })
