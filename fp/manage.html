@@ -5,18 +5,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Finale Project - Manage Booking</title>
+	<title>Final Project - Manage Booking</title>
 	<!--BootStrap things-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
 		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-		crossorigin="anonymous"></script>
 	<!--My Styles-->
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/book.css" rel="stylesheet">
 
 </head>
 
@@ -54,48 +49,85 @@
 			</div>
 	</nav>
 
-	<h1>MANAGE</h1>
+	<!--JumboTron-->
+	<div class="jumbotron">
+		<h1 class="display-4">Reservations</h1>
+		<p class="lead">You are about to manage your reservations.</p>
+		<hr class="my-4">
+		<p>Do note that requesting to delete your reseration before 1 working day of booking date will result in
+			reservation fees.</p>
+	</div>
 
-		<!--Footer-->
-		<footer>
-			<div class="container-fluid padding">
-				<div class="row text-center">
-	
-					<div class="col-md-4">
-						<hr class="light">
-						<p>Reach Us</p>
-						<hr class="light">
-						<p>333-333-3333</p>
-						<p>customerservice@helioshotel.com</p>
-						<p>33, St.Santorini</p>
-						<p>City, Greece, 33333</p>
-					</div>
-	
-					<div class="col-md-4">
-						<hr class="light">
-						<p>Office Hours</p>
-						<hr class="light">
-						<p>Weekday: 9am - 5pm</p>
-						<p>Weekends: 10am - 4pm</p>
-					</div>
-	
-					<div class="col-md-4">
-						<hr class="light">
-						<p>Social Media</p>
-						<hr class="light">
-						<p>Facebook</p>
-						<p>Instagram</p>
-						<p>Twitter</p>
-					</div>
-					<div class="col-12">
-						<hr class="light-100">
-						<h5>helioshotel.com</h5>
-					</div>
+	<!--Manage Reservations-->
+	<div class="row">
+		<div class="col boxpadding2">
+			<button type="button" class="btn btn-primary" id="refreshNow">Manage my reservations</button>
+			<table class="table table-striped" id="bookingNameList">
+				<thead>
+					<tr>
+						<th scope="col">Id</th>
+						<th scope="col">Name</th>
+						<th scope="col">Room type</th>
+						<th scope="col">Pax</th>
+						<th scope="col">Booking Date</th>
+						<th scope="col">Task</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+
+	<!--Footer-->
+	<footer>
+		<div class="container-fluid padding">
+			<div class="row text-center">
+
+				<div class="col-md-4">
+					<hr class="light">
+					<p>Reach Us</p>
+					<hr class="light">
+					<p>333-333-3333</p>
+					<p>customerservice@helioshotel.com</p>
+					<p>33, St.Santorini</p>
+					<p>City, Greece, 33333</p>
+				</div>
+
+				<div class="col-md-4">
+					<hr class="light">
+					<p>Office Hours</p>
+					<hr class="light">
+					<p>Weekday: 9am - 5pm</p>
+					<p>Weekends: 10am - 4pm</p>
+				</div>
+
+				<div class="col-md-4">
+					<hr class="light">
+					<p>Social Media</p>
+					<hr class="light">
+					<p>Facebook</p>
+					<p>Instagram</p>
+					<p>Twitter</p>
+				</div>
+				<div class="col-12">
+					<hr class="light-100">
+					<h5>helioshotel.com</h5>
 				</div>
 			</div>
-		</footer>
+		</div>
+	</footer>
 
-		<script src="js/list.js"></script>
+	<!--Jquery bunclde bootstrap-->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+		crossorigin="anonymous"></script>
+	<!--My code -->
+	<script src="js/man.js"></script>
 </body>
 
 </html>
