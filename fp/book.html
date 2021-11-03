@@ -49,35 +49,35 @@
 			</div>
 	</nav>
 
-		<!-- Image Slidebar -->
+	<!-- Image Slidebar -->
 
-		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-				<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-				<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="img/santorini Cropped.png" class="d-block w-100" alt="santorini 1">
-					<div class="carousel-caption d-none d-md-block">
-						<h3>Santorini's Finest</h3>
-					</div>
+	<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+			<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="img/santorini Cropped.png" class="d-block w-100" alt="santorini 1">
+				<div class="carousel-caption d-none d-md-block">
+					<h3>Santorini's Finest</h3>
 				</div>
-				<div class="carousel-item">
-					<img src="img/santorini2 Cropped.png" class="d-block w-100" alt="santorini 2">
-					<div class="carousel-caption d-none d-md-block">
-						<p>Stay with us</p>
-					</div>
+			</div>
+			<div class="carousel-item">
+				<img src="img/santorini2 Cropped.png" class="d-block w-100" alt="santorini 2">
+				<div class="carousel-caption d-none d-md-block">
+					<p>Stay with us</p>
 				</div>
-				<div class="carousel-item">
-					<img src="img/santorini3 Cropped.png" class="d-block w-100" alt="santorini 3">
-					<div class="carousel-caption d-none d-md-block">
-						<p>Never ever leave.</p>
-					</div>
+			</div>
+			<div class="carousel-item">
+				<img src="img/santorini3 Cropped.png" class="d-block w-100" alt="santorini 3">
+				<div class="carousel-caption d-none d-md-block">
+					<p>Never ever leave.</p>
 				</div>
 			</div>
 		</div>
+	</div>
 
 	<!--Booking Form-->
 	<div class="row boxpadding">
@@ -85,7 +85,7 @@
 		<div class="col-4">
 			<div class="form-group ">
 				<label for="exampleInputEmail1">Name</label>
-				<input type="text" class="form-control" id="userName">
+				<input type="text" class="form-control" id="userName" required>
 			</div>
 		</div>
 		<div class="col-4">
@@ -103,12 +103,12 @@
 			<div class="col-2"></div>
 			<div class="col-3">
 				<label for="exampleInputEmail1">Start Date</label>
-				<input type="date" class="form-control" id="sDate" placeholder="Travel Date">
+				<input type="date" class="form-control" id="sDate" min="2021-10-31" value="2021-10-31" placeholder="Travel Date">
 			</div>
 			<div class="col-1"></div>
 			<div class="col-3">
 				<label for="exampleInputEmail1">End Date</label>
-				<input type="date" class="form-control" id="eDate" placeholder="Travel Date">
+				<input type="date" class="form-control" id="eDate" min="2021-11-01" placeholder="Travel Date">
 			</div>
 		</div>
 	</form>
@@ -143,9 +143,10 @@
 		<div class="col-7">
 			<div class="form-group">
 				<label for="userRemarks">Remarks</label>
-				<textarea class="form-control" id="userRemarks" rows="3" placeholder="Example: Extra blankets and towels" ></textarea>
+				<textarea class="form-control" id="userRemarks" rows="3"
+					placeholder="Example: Extra blankets and towels"></textarea>
 			</div>
-			<button type="button" id="bookNow" class="btn btn-primary float-right">Book Me!</button>
+				<button type="submit" id="bookNow" class="btn btn-primary float-right">Book Me!</button>
 		</div>
 	</div>
 

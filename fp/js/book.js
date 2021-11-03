@@ -28,7 +28,7 @@ bookNowBtn.addEventListener("click", function () {
 })
 
 function bookNow(userName, userEmail, sDate, eDate, roomType, userPax, userRemarks) {
-	
+
 	/*console.log(userName)
 	console.log(userEmail)
 	console.log(sDate)
@@ -37,30 +37,36 @@ function bookNow(userName, userEmail, sDate, eDate, roomType, userPax, userRemar
 	console.log(userPax)
 	console.log(userRemarks)
 	*/
-	let url = 'https://api.sheety.co/d0ee26f24ec023cbb11299f34bf1c977/bookingApp2/mans';
-	let body = {
-		man: {
-			name: userName,
-			email: userEmail,
-			pax: userPax,
-			startDate: sDate,
-			endDate: eDate,
-			roomType: roomType,
-			remarks: userRemarks
-		}
+	if (userName == "" || userEmail == "" || eDate == "" || roomType == "" || userPax == "" || userRemarks == "") {
+		return (alert("Please answer all the required forms to book a room"))
 	}
-	fetch(url, {
-		method: 'POST',
-		body: JSON.stringify(body),
-		headers: {
-			"Content-Type": "application/json"
-	  }
-	})
-		.then((response) => response.json())
-		.then(json => {
-			// Do something with object
-			console.log(json.man);
-			alert("Your booking was succesful! Please wait for us to email you the total cost.")
-		});
+	else {
+		let url = 'https://api.sheety.co/d0ee26f24ec023cbb11299f34bf1c977/bookingApp2/mans';
+		let body = {
+			man: {
+				name: userName,
+				email: userEmail,
+				pax: userPax,
+				startDate: sDate,
+				endDate: eDate,
+				roomType: roomType,
+				remarks: userRemarks
+			}
+		}
+		fetch(url, {
+			method: 'POST',
+			body: JSON.stringify(body),
+			headers: {
+				"Content-Type": "application/json"
+			}
+		})
+			.then((response) => response.json())
+			.then(json => {
+				// Do something with object
+				console.log(json.man);
+				alert("Your booking was succesful! Please wait for us to email you the total cost.")
+				window.location.reload();
+			});
+	}
 
 }
