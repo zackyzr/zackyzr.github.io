@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+.parrallax1 {
+  background: url("../img/pool.png");
+  min-height: 100%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.navbar-nav > li{
+  padding-left:5px;
+  padding-right:5px;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  line-height: 180%;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  background-color: #211f1f;
+}
+
+.containergrey{
+	background-color: #2B2A2A;
+	text-align: center;
+}
+
+.containerblack{
+	background-color: #0c0f14;
+}
+.opacity{
+	background-color: transparent;
+	text-align: center;
+}
+.opacity2{
+	background-color: transparent;
+}
